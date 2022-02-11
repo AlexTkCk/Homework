@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 2</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+    <main>
+        <figure>
+            <img src="../images/img_2.png" alt="img_2">
+            <figcaption>Рис. 1. Ваш первый скрапер</figcaption>
+        </figure>
+
+        <article>
+            <p>urllib – стандартная библиотека Python (то есть вам не нужно устанавливать ничего дополнительно,
+                чтобы запустить этот пример) и содержит функции для запроса данных в сети, обработки cookies и
+                даже изменения метаданных (заголовков и пользовательского агента). На протяжении всей книги мы
+                будем использовать urllib довольно часто, поэтому рекомендуем вам прочитать <a href="https://docs.python.org/3/library/urllib.html">документацию</a>
+                Python по этой библиотеке.
+            </p>
+            <p>Библиотека BeautifulSoup была названа в честь одноименного стихотворения, входящего в сказку
+                Льюиса Кэролла «Приключения Алисы в Стране чудес». Библиотека BeautifulSoup пытается придать
+                смысл бессмыслице, она помогает отформатировать и систематизировать грязные интернет-данные,
+                исправляя плохо размеченные HTML страницы и выводя их в виде легко обрабатываемых объектов
+                Python, представляющих собой XML-структуры. Поскольку библиотека BeautifulSoup не является
+                библиотекой Python по умолчанию, ее нужно установить. На протяжении всей книги мы будем
+                использовать библиотеку BeautifulSoup 4 (также известную как BS4). Чтобы скачать Beautiful Soup,
+                зайдите на <a href="http://www.crummy.com/software/">crummy.com</a> (я скачал самую свежую версию <a
+                        href="https://www.crummy.com/software/BeautifulSoup/bs4/download/4.4/beautifulsoup4-4.4.1.tar.gz">4.4.1</a>). Распакуйте архив, зайдите в
+                распакованную папку и в командной строке выполните:
+            </p>
+
+            <code>
+                > python setup.py install
+            </code>
+
+            <p>BeautifulSoup теперь используется в качестве библиотеки Python на вашем компьютере (это дало мне
+                подсказку по второй проблеме неработающего кода: во второй строке скрипт пытался загрузить
+                библиотеку BeautifulSoup, которая написана для Python 2. Чтобы сконвертировать модуль
+                BeautifulSoup для Python 3 нужно выполнить команду <i>setup.py install – Прим. Багузина</i>). Проверьте
+                что библиотека BeautifulSoup стала доступна, открыв терминал Python и импортировав библиотеку:</p>
+
+            <code>
+                > from bs4 import BeautifulSoup
+            </code>
+
+            <p>Подробнее о библиотеке BeautifulSoup см. <a href="http://wiki.python.su/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D0%B8/BeautifulSoup">документацию</a> на русском языке. Наиболее часто в
+                библиотеке BeautifulSoup используется объект BeautifulSoup. Дополним пример, приведенный выше: </p>
+
+            <code>
+                from urllib.request import urlopen
+                from bs4 import BeautifulSoup
+                html = urlopen("http://www.pythonscraping.com/pages/page1.html")
+                bsObj = BeautifulSoup(html.read());
+                print(bsObj.h1)
+            </code>
+
+            <p>Результат работы кода:</p>
+
+            <code>
+                &lth1&gtAn Interesting Title&lt/h1&gt
+            </code>
+
+            <p>Поскольку web не идеален, предусмотрите в коде скрапинга обработку ошибок (рис. 2).</p>
+        </article>
+
+        <footer>
+            <a href="page_3.html">Следующая страница -></a>
+        </footer>
+    </main>
+</body>
+</html>

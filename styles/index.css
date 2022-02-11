@@ -1,0 +1,41 @@
+body {
+    margin: 2%;
+}
+
+a {
+    color: blue;
+}
+
+a :visited {
+    color: blue;
+}
+
+section {
+    line-height: 5px;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    border: 1px solid black;
+}
+
+.section_chapter_header .outer_header {
+    color: #437fc5;
+    font-size: 20px;
+}
+
+.section_chapter_header .inner_header {
+    color: #2b5d8c;
+    font-size: 17px;
+}
+
+code {
+    white-space: pre-line;
+}
+
+p {
+    margin-bottom: 0;
+}

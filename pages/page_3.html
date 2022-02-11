@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 3</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<body>
+<main>
+    <figure>
+        <img src="../images/img_3.png" alt="img_3">
+        <figcaption>Рис. 2. Обработка ошибок</figcaption>
+    </figure>
+
+    <section class="section_chapter_header">
+        <p class="inner_header">Глава 2. Продвинутый парсинг HTML</p>
+    </section>
+
+    <p>Стилевое оформление (CSS) предназначено не только для браузера, оно упрощает работу вебскраперов. CSS основан на дифференциации HTML-элементов, которые могут иметь точно такую же
+        разметку, но отличаться по стилю. То есть некоторые теги могут выглядеть следующим образом:</p>
+
+    <code>
+        &ltspan class="green"&gt&lt/span&gt
+    </code>
+
+    <p>тогда как другие теги выглядят так:</p>
+
+    <code>
+        &ltspan class="red"&gt&lt/span&gt
+    </code>
+
+    <p>Веб-скраперы могут дифференцировать эти теги в зависимости от их класса (дочитав до этого места,
+        я вернулся к своему коду, и мне, наконец, удалось его запустить; см. <a href="http://baguzin.ru/wp/?p=14390">Извлечение данных с webстраниц с помощью кода на языке Python</a>).
+    </p>
+    <p>Следующий код позволит извлечь с тестовой страницы все имена персонажей, выделенные зеленым
+        цветом (рис. 3).</p>
+    
+    <figure>
+        <img src="../images/img_4.png" alt="img_4">
+        <figcaption>Рис. 3. Извлечение всех имен, выделенных зеленым цветом</figcaption>
+    </figure>
+
+    <footer>
+        <a href="page_4.html">Следующая страница -></a>
+    </footer>
+</main>
+</body>
+</html>
